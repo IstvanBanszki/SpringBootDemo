@@ -6,6 +6,7 @@ buildscript {
     }
     ext {
 		springBootVersion = '1.5.6.RELEASE'
+        springVersion = '4.3.10.RELEASE'
     }
     dependencies {
 		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
@@ -19,7 +20,7 @@ apply plugin: 'org.springframework.boot'
 
 jar {
     baseName = 'springboot-demo'
-    version = '0.0.1-SNAPSHOT'
+    version = '0.0.2-SNAPSHOT'
 }
 
 repositories {
@@ -32,5 +33,6 @@ dependencies {
     }
     compile "org.springframework.boot:spring-boot-starter-undertow:${springBootVersion}"
     compile "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}"
+    compile "org.springframework:spring-core:${springVersion}"
 }
 
